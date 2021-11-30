@@ -1,3 +1,28 @@
+
+let title = document.querySelector("#primary > div > div > span:nth-child(1) > ul > li:nth-child(1)");
+let txt = document.querySelector("#primary > div > div > span:nth-child(1) > ul > li:nth-child(2) > span > div");
+if (txt) { txt = txt.textContent; }
+else {
+        txt = document.querySelector("#primary > div > div > span:nth-child(1) > ul > li:nth-child(2) > span");
+        if (txt) { txt = txt.textContent; } else { txt = ""; }
+}
+let link = document.querySelector("#primary > div > div > span:nth-child(2) > a");
+let link2 = document.querySelector("#primary > div > div > span:nth-child(3) > a");
+if (link) { link = link.href; } else { link = " "; }
+if (link2) { link2 = link2.href; } else { link2 = " "; }
+if (title) { title = title.title; } else { title = ""; }
+console.log(`//--------------------------------------
+aqida.title[] ="${title}";
+aqida.texts[] ="${txt}";
+aqida.imgs[] ="/img/aqida/h.png";
+aqida.url[] ="${link} --- ${link2}";
+ 
+`);
+console.log("     ");
+
+
+
+
 //====================================================================================================================
 //                              الحديث
 //====================================================================================================================
