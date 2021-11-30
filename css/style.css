@@ -1,0 +1,27 @@
+
+h1{
+    text-align: center;
+    text-shadow: 1px 1px black,
+    -1px -1px white;
+
+    
+}
+.navbar-brand {
+    color: rgb(163, 163, 0) !important;
+}
+
+.navbar-brand:hover {
+    color: yellow !important;
+}
+
+.myMenu:hover {
+    opacity: 75% !important;
+    /* color: rgb(71, 71, 3) !important; */
+    color: yellow !important;
+    background-color: #6c757d;
+
+}
+
+.accordion-body{
+    background-color: #6c757d;
+}
