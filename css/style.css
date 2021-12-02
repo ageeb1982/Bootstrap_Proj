@@ -25,3 +25,7 @@ h1{
 .accordion-body{
     background-color: #6c757d;
 }
+.card.m-auto.mt-3.mb-3.g-col-2.g-col-md-4.row {
+    background-color: #5b8891;
+    color: black;
+}
