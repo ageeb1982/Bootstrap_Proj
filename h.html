@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>كتب شرعية</title>
 </head>
-<!-- <script src="js/script.js"></script> -->
+
 <body class="bg-dark bg-opacity-75" dir="rtl">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark bg-opacity-100 d-flex">
         <div class="container">
@@ -66,9 +66,8 @@
             <img width="10%" src="img/logo1.png" alt="...">
         </h1>
         <embed id="myView" src="" width="100%"><embed>
-
         <!-- style="display: none;" -->
-        <button onclick="viewBook('helo','bye')">------------------</button>
+        
         <div class="accordion" id="BookType">
 
             <!---------1-quran-------->
@@ -83,7 +82,15 @@
                 <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="quran"
                     data-bs-parent="#BookType">
                     <div id="q_body" class="accordion-body row">
-
+<div class="card m-auto mt-3 mb-3 g-col-2 g-col-md-4 row" style="width: 18rem;">
+    <img role="button" src="img/aqida/a0.png" class="card-img-top" alt="${title}" onclick="viewBook(" ${title}","${url}")" />
+    <div class="card-body">
+        <h5 class="card-title">title1</h5>
+        <p class="card-text">${texts}</p>
+        <button onclick="viewBook()" class="btn btn-primary">تصفح الكتاب</button>
+        <a href="${url}" class="btn btn-primary" download>تحميل</a>
+    </div>
+</div>
 
 
                     </div>
@@ -241,6 +248,44 @@
     </footer> -->
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js" type="module"></script>
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
 </body>
 
 </html>

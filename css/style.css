@@ -1,11 +1,11 @@
-
-h1{
+h1 {
     text-align: center;
     text-shadow: 1px 1px black,
-    -1px -1px white;
+        -1px -1px white;
 
-    
+
 }
+
 .navbar-brand {
     color: rgb(163, 163, 0) !important;
 }
@@ -22,10 +22,21 @@ h1{
 
 }
 
-.accordion-body{
+.accordion-body {
     background-color: #6c757d;
 }
+
 .card.m-auto.mt-3.mb-3.g-col-2.g-col-md-4.row {
     background-color: #5b8891;
     color: black;
+}
+
+#myView {
+    width: 60%;
+    height: 500px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid black;
+    border-radius: 5% 5% 0% 5%;
+    box-shadow: 5px 5px black;
 }
