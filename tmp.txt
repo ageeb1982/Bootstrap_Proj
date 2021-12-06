@@ -14,7 +14,7 @@ if (title) { title = title.title; } else { title = ""; }
 console.log(`//--------------------------------------
 aqida.title[] ="${title}";
 aqida.texts[] ="${txt}";
-aqida.imgs[] ="/img/aqida/h.png";
+aqida.imgs[] ="./img/aqida/h.png";
 aqida.url[] ="${link} --- ${link2}";
  
 `);

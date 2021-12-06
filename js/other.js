@@ -29,9 +29,9 @@ console.log(`
 //--------------------------------------------------------------------------
 title[]="${title}";
 texts[]="${txt}";
-imgs[]="/img/figh/a.png";
+imgs[]="./img/figh/a.png";
 url[]="${link}";
-`); 
+`);
 
 
 
@@ -61,7 +61,7 @@ try { txt = txt.trim(); } catch { }
 console.log(`//--------------------------------------
 title[] ="${title}";
 texts[] ="${txt}";
-imgs[] ="/img/figh/a.png";
+imgs[] ="./img/figh/a.png";
 url[] ="${link}";
  
 `);
