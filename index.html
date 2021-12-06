@@ -11,11 +11,18 @@
     <meta name="author" content="Mohamed Ageeb">
     <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="icon/style.css">
     <link rel="stylesheet" href="css/style.css">
     <title>كتب شرعية</title>
 </head>
 <!-- <script src="js/script.js"></script> -->
+
 <body class="bg-dark bg-opacity-75" dir="rtl">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark bg-opacity-100 d-flex">
         <div class="container">
@@ -39,18 +46,19 @@
                             أقسام الكتب
                         </a>
                         <ul class="dropdown-menu bg-dark  text-dark" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item text-light myMenu" href="#quran">القرآن وعلومه</a></li>
-                            <li><a class="dropdown-item text-light myMenu" href="#hadith">الحديث وعلومه</a></li>
-                            <li><a class="dropdown-item text-light myMenu" href="#aqida">العقيدة والفرق والأديان</a>
+                            <li><a class="dropdown-item text-light myMenu" link="quran">القرآن وعلومه</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="hadith">الحديث وعلومه</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="aqida">العقيدة والفرق والأديان</a>
                             </li>
-                            <li><a class="dropdown-item text-light myMenu" href="#figh">الفقه وأصوله</a></li>
-                            <li><a class="dropdown-item text-light myMenu" href="#tazkia">التزكية والإخلاق والدعوة</a>
+                            <li><a class="dropdown-item text-light myMenu" link="figh">الفقه وأصوله</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="tazkia">التزكية والإخلاق والدعوة</a>
                             </li>
-                            <li><a class="dropdown-item text-light myMenu" href="#arabic">اللغة العربية وعلومها</a></li>
-                            <li><a class="dropdown-item text-light myMenu" href="#sera">السيرة النبوية والتاريخ</a></li>
-                            <li><a class="dropdown-item text-light myMenu" href="#tragim">التراجم والأنساب والرحلات</a>
+                            <li><a class="dropdown-item text-light myMenu" link="arabic">اللغة العربية وعلومها</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="sera">السيرة النبوية
+                                    والتاريخ</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="tragim">التراجم والأنساب والرحلات</a>
                             </li>
-                            <li><a class="dropdown-item text-light myMenu" href="#coctel">منوعات</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="coctel">منوعات</a></li>
 
                         </ul>
                     </li>
@@ -59,17 +67,45 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
+   
+    <div class="container">
+<div id="mySliderX">
+    <br>
+    <div id="sliderCaption" class="carousel slide w-50 mx-lg-auto" data-bs-ride="carousel">
+        <div id="sliderTitle" class="carousel-indicators">
+
+        </div>
+        <div id="sliderBody" class="carousel-inner">
+
+        </div>
+        <button class="carousel-control-prev bg-black" type="button" data-bs-target="#sliderCaption"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">السابق</span>
+        </button>
+        <button class="carousel-control-next bg-black" type="button" data-bs-target="#sliderCaption"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">التالي</span>
+        </button>
+    </div>
+</div>
         <h1 class="shadow text-info m-5 h1">
             <img width="10%" src="img/logo1.png" alt="..."> موقع تصفح الكتب الشرعية
             <img width="10%" src="img/logo1.png" alt="...">
         </h1>
-        <embed id="myView" src="" width="100%"><embed>
+
+
+
+
+        <embed id="myView" style="display: none;" src="" width="100%"><embed>
 
         <!-- style="display: none;" -->
-        <button onclick="viewBook('helo','bye')">------------------</button>
-        <div class="accordion" id="BookType">
+         <div class="accordion" id="BookType">
 
             <!---------1-quran-------->
             <div class="accordion-item">
@@ -90,155 +126,141 @@
 
                 </div>
             </div>
-        </div>
 
-        <!-------2-hadith--------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="hadith">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false"
-                    aria-controls="flush-collapse2">
-                    القسم الثاني : &nbsp; <strong> (الحديث وعلومه)</strong> </button>
-            </h2>
-            <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="hadith"
-                data-bs-parent="#BookType">
-                <div id="h_body" class="accordion-body row"> </div>
+
+            <!-------2-hadith--------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="hadith">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false"
+                        aria-controls="flush-collapse2">
+                        القسم الثاني : &nbsp; <strong> (الحديث وعلومه)</strong> </button>
+                </h2>
+                <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="hadith"
+                    data-bs-parent="#BookType">
+                    <div id="h_body" class="accordion-body row"> </div>
+                </div>
             </div>
-        </div>
 
-        <!-------3-aqida--------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="aqida">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false"
-                    aria-controls="flush-collapse3">
-                    القسم الثالث : &nbsp; <strong> (العقيدة والفرق والأديان)</strong>
-                </button>
+            <!-------3-aqida--------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="aqida">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false"
+                        aria-controls="flush-collapse3">
+                        القسم الثالث : &nbsp; <strong> (العقيدة والفرق والأديان)</strong>
+                    </button>
 
-            </h2>
-            <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="aqida"
-                data-bs-parent="#BookType">
-                <div id="a_body" class="accordion-body row"></div>
+                </h2>
+                <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="aqida"
+                    data-bs-parent="#BookType">
+                    <div id="a_body" class="accordion-body row"></div>
+                </div>
             </div>
-        </div>
 
-        <!--------4-figh-------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="figh">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false"
-                    aria-controls="flush-collapse4">
-                    القسم الرابع : &nbsp; <strong> (الفقه وأصوله)</strong>
-                </button>
-            </h2>
-            <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="figh"
-                data-bs-parent="#BookType">
-                <div id="f_body" class="accordion-body row"></div>
+            <!--------4-figh-------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="figh">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false"
+                        aria-controls="flush-collapse4">
+                        القسم الرابع : &nbsp; <strong> (الفقه وأصوله)</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="figh"
+                    data-bs-parent="#BookType">
+                    <div id="f_body" class="accordion-body row"></div>
+                </div>
             </div>
-        </div>
 
-        <!--------5-tazkia-------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="tazkia">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false"
-                    aria-controls="flush-collapse5">
-                    القسم الخامس : &nbsp; <strong> (التزكية والإخلاق والدعوة)</strong>
-                </button>
-            </h2>
-            <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="tazkia"
-                data-bs-parent="#BookType">
-                <div id="tz_body" class="accordion-body row"></div>
+            <!--------5-tazkia-------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="tazkia">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false"
+                        aria-controls="flush-collapse5">
+                        القسم الخامس : &nbsp; <strong> (التزكية والإخلاق والدعوة)</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="tazkia"
+                    data-bs-parent="#BookType">
+                    <div id="tz_body" class="accordion-body row"></div>
+                </div>
             </div>
-        </div>
 
-        <!-------6-arabic--------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="arabic">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false"
-                    aria-controls="flush-collapse6">
-                    القسم السادس : &nbsp; <strong> (اللغة العربية وعلومها)</strong>
-                </button>
-            </h2>
-            <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="arabic"
-                data-bs-parent="#BookType">
-                <div id="ar_body" class="accordion-body row"></div>
+            <!-------6-arabic--------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="arabic">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false"
+                        aria-controls="flush-collapse6">
+                        القسم السادس : &nbsp; <strong> (اللغة العربية وعلومها)</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="arabic"
+                    data-bs-parent="#BookType">
+                    <div id="ar_body" class="accordion-body row"></div>
+                </div>
             </div>
-        </div>
 
-        <!-------7-sera--------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="sera">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false"
-                    aria-controls="flush-collapse7">
-                    القسم السابع : &nbsp; <strong> (السيرة النبوية والتاريخ)</strong>
+            <!-------7-sera--------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="sera">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false"
+                        aria-controls="flush-collapse7">
+                        القسم السابع : &nbsp; <strong> (السيرة النبوية والتاريخ)</strong>
 
-                </button>
-            </h2>
-            <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="sera"
-                data-bs-parent="#BookType">
-                <div id="s_body" class="accordion-body row"></div>
+                    </button>
+                </h2>
+                <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="sera"
+                    data-bs-parent="#BookType">
+                    <div id="s_body" class="accordion-body row"></div>
+                </div>
             </div>
-        </div>
 
-        <!--------8-tragim-------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading8">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false"
-                    aria-controls="flush-collapse8">
-                    القسم الثامن : &nbsp; <strong> (التراجم والأنساب والرحلات)</strong>
+            <!--------8-tragim-------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="tragim">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false"
+                        aria-controls="flush-collapse8">
+                        القسم الثامن : &nbsp; <strong> (التراجم والأنساب والرحلات)</strong>
 
-                </button>
-            </h2>
-            <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8"
-                data-bs-parent="#BookType">
-                <div id="tr_body" class="accordion-body row"> </div>
+                    </button>
+                </h2>
+                <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="tragim"
+                    data-bs-parent="#BookType">
+                    <div id="tr_body" class="accordion-body row"> </div>
+                </div>
             </div>
-        </div>
 
-        <!--------9-coctel-------->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="coctel">
-                <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false"
-                    aria-controls="flush-collapse9">
-                    القسم التاسع : &nbsp; <strong> (منوعات)</strong>
-                </button>
-            </h2>
-            <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="coctel"
-                data-bs-parent="#BookType">
-                <div id="c_body" class="accordion-body row"> </div>
+            <!--------9-coctel-------->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="coctel">
+                    <button class="accordion-button bg-dark text-center text-info collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false"
+                        aria-controls="flush-collapse9">
+                        القسم التاسع : &nbsp; <strong> (منوعات)</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="coctel"
+                    data-bs-parent="#BookType">
+                    <div id="c_body" class="accordion-body row"> </div>
+                </div>
             </div>
+
         </div>
-
-
     </div>
 
-    <!-- <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <span class="text-muted">© 2021 Company, Inc</span>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 1443 :
+            <a class="text-dark" href="https://mdbootstrap.com/">كتب شرعية - بواسطة محمد عجيب</a>
         </div>
-
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#twitter"></use>
-                    </svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#instagram"></use>
-                    </svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                        <use xlink:href="#facebook"></use>
-                    </svg></a></li>
-        </ul>
-    </footer> -->
+        <!-- Copyright -->
+    </footer>
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js" type="module"></script>
 </body>
