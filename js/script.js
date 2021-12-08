@@ -7,6 +7,7 @@ import Quran from './books/quran.js';
 import Sera from './books/sera.js';
 import Tazkia from './books/tazkia.js';
 import Tragim from './books/tragim.js';
+
 let grp = 0;
 function showBook(oe) {
     let item = this;
@@ -26,12 +27,8 @@ function Go() {
     let myView = document.getElementById(t);
     let btn = myView.querySelector(".accordion-button");
     // document.body.parentNode.scrollTo(1,1);
-    document.body.parentNode.scrollTo({
-        top: myView.offsetTop,
-        left: 0,
-        behavior: 'smooth'
-    });
-     
+
+
 
     var y = myView.offsetTop;
     var node = myView;
@@ -50,10 +47,18 @@ function Go() {
     // var scrollDiv = myView.offsetTop;
     // window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
 
- 
+    window.scrollTo(0, document.body.scrollHeight);
+
+    document.body.parentNode.scrollTo({
+        top: myView.offsetTop,
+        left: 0,
+        behavior: 'smooth'
+    });
 
 
- 
+
+
+
 
 
     // document.body.parentNode.scrollTo({
@@ -61,7 +66,7 @@ function Go() {
     //     left: 0,
     //     behavior: 'smooth'
     // });
-//}
+    //}
 
 
 
@@ -230,3 +235,4 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+ 

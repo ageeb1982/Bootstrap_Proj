@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="صفحة لعرض الكتب الشرعية في كافة المجالات من عقيدة أو فقه أو حديث أو تفسير القران وغيره">
+    <meta name="keywords" content="كتب شرعية,الكتاب,كتاب إسلامي,فقه,توحيد,عقيدة,تفسير,قران">
+    <meta name="author" content="Mohamed Ageeb">
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="icon/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+    <title>كتب شرعية</title>
+</head>
+<!-- <script src="js/script.js"></script> -->
+
+<body class="bg-dark bg-opacity-75" dir="rtl">
+    <nav class="fixed-top navbar navbar-expand-sm bg-dark navbar-dark bg-opacity-100 d-flex">
+        <div class="container">
+            <a class="navbar-brand btn btn-outline-secondary me-2" href="/"> <i class="icon-books"></i> الكتب
+                الشرعية</a></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" target="_blank"
+                            href="https://ageeb1982.github.io/JavaScript_proj/proj4.html">الإذاعة</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            أقسام الكتب
+                        </a>
+                        <ul class="dropdown-menu bg-dark  text-dark" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item text-light myMenu" link="quran">القرآن وعلومه</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="hadith">الحديث وعلومه</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="aqida">العقيدة والفرق والأديان</a>
+                            </li>
+                            <li><a class="dropdown-item text-light myMenu" link="figh">الفقه وأصوله</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="tazkia">التزكية والإخلاق والدعوة</a>
+                            </li>
+                            <li><a class="dropdown-item text-light myMenu" link="arabic">اللغة العربية وعلومها</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="sera">السيرة النبوية
+                                    والتاريخ</a></li>
+                            <li><a class="dropdown-item text-light myMenu" link="tragim">التراجم والأنساب والرحلات</a>
+                            </li>
+                            <li><a class="dropdown-item text-light myMenu" link="coctel">منوعات</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="./srch.html"> <i class="fa fa-search"></i> البحث عن الأحاديث</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <div class="container">
+
+        <h1 class="shadow text-info m-5 h1">
+            <img width="10%" src="img/zoom.png" alt="..."> البحث عن صحة الأحاديث
+            <img width="10%" src="img/zoom.png" alt="...">
+        </h1>
+
+        <div method="get" class="container">
+            <div class="row height d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <div class="search"> <i class="fa fa-search"></i> <input id="txt" type="text" class="form-control"
+                            placeholder="اكتب النص المراد البحث عنه">
+                        <button id="cmdSrch" type="button" onclick=Search() class="btn btn-primary"
+                            style="font-weight: bold;">بـــحـــث</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="srch_Body" style="display: none;" src="" width="100%"><embed>
+
+
+        </div>
+        <script src="./js/jquery-1.2.6.min.js"></script>
+        <script src="./js/bootstrap.js"></script>
+        <script src="./js/srch.js"></script>
+</body>
+
+</html>

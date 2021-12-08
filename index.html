@@ -24,9 +24,9 @@
 <!-- <script src="js/script.js"></script> -->
 
 <body class="bg-dark bg-opacity-75" dir="rtl">
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark bg-opacity-100 d-flex">
+    <nav class="fixed-top navbar navbar-expand-sm bg-dark navbar-dark bg-opacity-100 d-flex">
         <div class="container">
-            <a class="navbar-brand btn btn-outline-secondary me-2" href=" #"> <i class="icon-books"></i> الكتب
+            <a class="navbar-brand btn btn-outline-secondary me-2" href="/"> <i class="icon-books"></i> الكتب
                 الشرعية</a></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,38 +62,40 @@
 
                         </ul>
                     </li>
-
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="./srch.html"> <i class="fa fa-search"></i> البحث عن الأحاديث</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fas fa-arrow-up"></i>
-</button>
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-   
+
     <div class="container">
-<div id="mySliderX">
-    <br>
-    <div id="sliderCaption" class="carousel slide w-50 mx-lg-auto" data-bs-ride="carousel">
-        <div id="sliderTitle" class="carousel-indicators">
+        <div id="mySliderX">
+            <br>
+            <div id="sliderCaption" class="carousel slide w-50 mx-lg-auto" data-bs-ride="carousel">
+                <div id="sliderTitle" class="carousel-indicators">
 
-        </div>
-        <div id="sliderBody" class="carousel-inner">
+                </div>
+                <div id="sliderBody" class="carousel-inner">
 
+                </div>
+                <button class="carousel-control-prev bg-black" type="button" data-bs-target="#sliderCaption"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">السابق</span>
+                </button>
+                <button class="carousel-control-next bg-black" type="button" data-bs-target="#sliderCaption"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">التالي</span>
+                </button>
+            </div>
         </div>
-        <button class="carousel-control-prev bg-black" type="button" data-bs-target="#sliderCaption"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">السابق</span>
-        </button>
-        <button class="carousel-control-next bg-black" type="button" data-bs-target="#sliderCaption"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">التالي</span>
-        </button>
-    </div>
-</div>
         <h1 class="shadow text-info m-5 h1">
             <img width="10%" src="img/logo1.png" alt="..."> موقع تصفح الكتب الشرعية
             <img width="10%" src="img/logo1.png" alt="...">
@@ -105,7 +107,7 @@
         <embed id="myView" style="display: none;" src="" width="100%"><embed>
 
         <!-- style="display: none;" -->
-         <div class="accordion" id="BookType">
+        <div class="accordion" id="BookType">
 
             <!---------1-quran-------->
             <div class="accordion-item">

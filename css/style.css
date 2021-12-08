@@ -1,3 +1,7 @@
+body {
+    margin-top: 100px;
+}
+
 h1 {
     text-align: center;
     text-shadow: 1px 1px black,
@@ -23,11 +27,19 @@ h1 {
 }
 
 .accordion-body {
-    background-color: #6c757d;
+    /* background-color: #6c757d; */
+
+    /* background-image: url('../img/books.png'); */
+    background: url('../img/books.png');
+
+    background: url('../img/books.png') repeat 50% 50%;
+
 }
 
 .card.m-auto.mt-3.mb-3.g-col-2.g-col-md-4.row {
-    background-color: #5b8891;
+    background-color: #6e9ecd;
+    /* // #5b8891; */
+
     color: black;
 }
 
@@ -40,24 +52,25 @@ h1 {
     border-radius: 5% 5% 0% 5%;
     box-shadow: 5px 5px black;
 }
-.carousel-caption{
-    text-shadow:1px 1px black,-1px -1px black;
-    color:yellow
-    
+
+.carousel-caption {
+    text-shadow: 1px 1px black, -1px -1px black;
+    color: yellow
 }
+
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 10px;
     display: none;
     border-radius: 50%;
-        /* text-shadow:1px 1px black, */
-        /* -1px -1px black; */
-box-shadow: 2px 2px rgb(65, 5, 5);
+    /* text-shadow:1px 1px black, */
+    /* -1px -1px black; */
+    box-shadow: 2px 2px rgb(65, 5, 5);
 }
 
 
-footer{
+footer {
     margin-top: 50px;
     font-size: larger;
     font-weight: bold;
@@ -65,36 +78,41 @@ footer{
 
 
 
-#mySliderX{
+#mySliderX {
     margin-top: 15px;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
+
 @media (max-width:1440px) {
     #mySliderX {
         width: 50%;
-         
+
     }
 }
+
 @media (max-width:1200px) {
     #mySliderX {
-         width: 70%;
+        width: 70%;
     }
 }
+
 @media (max-width:992px) {
     #mySliderX {
         width: 70%;
     }
 }
+
 @media (max-width:768px) {
     #mySliderX {
         width: 70%;
         margin-right: 30%;
         margin-left: auto;
-         
-     }
+
+    }
 }
+
 @media (max-width:575px) {
     #mySliderX {
         width: 80%;
@@ -102,11 +120,13 @@ footer{
         margin-left: auto;
 
     }
-#myView {
-    width: 100%;
 
+    #myView {
+        width: 100%;
+
+    }
 }
-}
+
 @media (max-width:360px) {
     #mySliderX {
         width: 100%;
@@ -114,8 +134,10 @@ footer{
         margin-left: auto;
 
     }
-    #myView{
+
+    #myView {
         width: 100%;
+        min-height: 150px;
 
     }
 }
