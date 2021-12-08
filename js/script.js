@@ -14,11 +14,27 @@ function showBook(oe) {
 
     let myView = document.getElementById("myView");
     myView.style.display = "block";
-    //window.scroll(0, findPos(myView));
+    // //window.scroll(0, findPos(myView));
     var scrollDiv = myView.offsetTop;
-    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+    // window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
     let url = this.getAttribute("url");
     myView.src = url;
+    //  let myView2 = document.getElementById("myView2");
+    //  myView2.style.display = "block";
+
+    // // //  var scrollDiv2 = myView2.offsetTop;
+    // // // window.scrollTo({ top: scrollDiv2, behavior: 'smooth' });
+    //  myView2.data = url;
+    document.getElementById("MyLink").href = url;
+    let googleURL = `https://docs.google.com/viewer?url=${url}&embedded=true`;
+    let myView3 = document.getElementById("myView3");
+    myView3.style.display = "block";
+    myView3.src = googleURL;
+    var scrollDiv3 = myView3.offsetTop;
+    window.scrollTo({ top: scrollDiv3, behavior: 'smooth' });
+
+
+
 
 }
 
@@ -235,4 +251,3 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
- 

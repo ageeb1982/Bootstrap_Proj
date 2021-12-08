@@ -43,7 +43,7 @@ h1 {
     color: black;
 }
 
-#myView {
+.myView {
     width: 60%;
     height: 500px;
     margin-left: 20%;
@@ -103,13 +103,14 @@ footer {
     #mySliderX {
         width: 70%;
     }
-body {
-    padding: 10px !important;
-}
 
-.m-5 {
-    margin: 1rem !important;
-}
+    body {
+        padding: 10px !important;
+    }
+
+    .m-5 {
+        margin: 1rem !important;
+    }
 }
 
 
@@ -131,29 +132,41 @@ body {
 
     }
 
-    #myView {
+    .myView {
         width: 100%;
-  margin-left: 0px;
-  margin-right: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
+}
+
+@media (max-width:425px) {
+    .w-50 {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 375px) {
+
+
+    .m-5 {
+        margin: -1rem !important;
+    }
+
 }
 
 @media (max-width:360px) {
     #mySliderX {
         width: 100%;
-        /* margin-right: 20%;
-        margin-left: auto; */
+
 
     }
 
-    #myView {
+    .myView {
         width: 100%;
         min-height: 150px;
-       
-            margin-left: 0px;
-            margin-right: 0px;
 
-    } 
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
 }
-
- 
