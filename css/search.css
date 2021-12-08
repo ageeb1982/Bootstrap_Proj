@@ -58,7 +58,11 @@
 	    color: #bfbf24;
         
 	}
-    
+    .info-subtitle:not(:first-child):before {
+    	/* content: '<br>'; */
+    	content: '\A';
+    	white-space: pre;
+    }
 
 	.search-keys {
 	    color: #ed9090;
@@ -77,4 +81,30 @@
 	.hadith {
 	    background-color: #0b6c6c59;
 	    margin-top: 15px
+	}
+	@media (max-width: 992px) {
+		
+		body {
+			padding: 10px !important;
+		}
+
+		.m-5 {
+			margin: 1rem !important;
+		}
+
+		#srch_Body {
+			margin-right: 2px;
+			margin-left: 2px;
+		}
+		.container,
+		.container-fluid,
+		.container-lg,
+		.container-md,
+		.container-sm,
+		.container-xl,
+		.container-xxl {
+			width: 100%;
+			padding-left: 1px;
+			padding-right:1px;
+		}
 	}

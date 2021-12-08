@@ -41,11 +41,9 @@ function Search() {
 
 let getdata = (srch) => {
     url = "https://dorar.net/dorar_api.json?skey=" + srch + "&callback=?";
-    $.getJSON(url, function (data) {
-
-
-        // console.log(data.ahadith);
-
+   
+    var jqxhr = $.getJSON(url, function (data) {
+        console.log("success", data);
         $("#srch_Body").html("");
         let srchbody = document.getElementById("srch_Body");
         srchbody.style.display = "block";
@@ -80,14 +78,34 @@ let getdata = (srch) => {
 
         });
 
-        // $("#srch_Body")
+    })
+        .done(function (z) {
+            console.log("second success",z);
+        })
+        .fail(function (w) {
+            console.log("error"),w;
+        })
+        .always(function (zz) {
+            console.log("complete",zz);
+        });
+   
+   
+   
+   
+    // $.getJSON(url, function (data) {
 
-        // if (item.includes("dorar.net")) {
-        //     $("#srch_Body").append("<div class='btn btn-info'>" + item + "</div>");
-        // }
+
+    //     // console.log(data.ahadith);
+
+        
+    //     // $("#srch_Body")
+
+    //     // if (item.includes("dorar.net")) {
+    //     //     $("#srch_Body").append("<div class='btn btn-info'>" + item + "</div>");
+    //     // }
 
 
-    });
+    // });
 
 };
 
