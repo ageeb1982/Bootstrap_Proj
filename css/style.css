@@ -161,6 +161,10 @@ footer {
 
     }
 
+    .height.d-flex.justify-content-center.align-items-center {
+        margin-top: 40px;
+    }
+
     .myView {
         width: 100%;
         min-height: 150px;
